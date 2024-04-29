@@ -1,47 +1,31 @@
+import { Fragment } from "react"
+import './App.css';
+import { useRef } from "react";
 
-import './App.css'
 
 function App() {
-  
-  function addBackground(){
-    document.body.style.backgroundColor = 'deeppink';
-    const div= document.getElementById('box');
-    div.style.cursor = 'pointer';
 
-  } 
+// hook -useRef
 
-  function removeBackground(){
-    document.body.style.backgroundColor = 'white';
-
-  } 
+const myRef = useRef();
 
 
-//avoidReload;
-  const handleSubmit=(e)=>{
-    const input = document.getElementById('username').value;
-    console.log(e.target);
-e.preventDefault();
-console.log(input);
+  const handleClick=()=>{
+    // console.log(myRef);
+
+
+//  document.body.style.backgroundColor = 'cyan';
+//  document.getElementById('btn').style.border = '1px solid black';
+//  document.getElementById('btn').style.color = 'black';
+
+
+myRef.current.style.backgroundColor ='salmon'  ;          //so we dont require id  and old javascript  methods.
   }
-
-
   return (
-    <>
-    {/* // <Fragment>
-    //   <button className='py-1 px-6 bg-gray-500' onClick={addBackground} onDoubleClick={removeBackground}> dark</button>
-    // </Fragment> */}
-
-    <div id="box" className='w-[25vh] h-[25vh] bg-cyan-400 ' onMouseOver={addBackground} onMouseLeave={removeBackground}></div>
-  
-      <form className='flex flex-col' id='form' onSubmit={handleSubmit}>
-      <label>Usename : </label>
-        <input type='text' className='border border-black rounded mb-2 ' placeholder='enter ur username' id = 'username'></input>
-        <button id = 'btn' className='py-1 px-6 bg-cyan-500'>Login</button>
-      </form>
-      
-
-    </>
-    
+    <Fragment >
+      <div className ='border-1 border-white py-1 px-5 text-black hover:bg-cyan-50 hover:text-black ' id="btn"
+       onClick={handleClick} ref ={myRef}>Hooks</div>
+    </Fragment>
   )
 }
 

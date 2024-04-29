@@ -1,2 +1,15 @@
 hooks are javascript func. 
 with the help of hooks we can implement state and lifecycle methods in functional component
+hooks were starts with 'use' 
+hooks were added in react library in verion 16.8
+to use hooks we have to name import from react library.
+
+rules :
+we can use hooks inside fucntional component only.
+we cant use hooks inside class based components or in plane js
+we cant use hook inside a loop ,conndition or inside nested condition.
+we have to call a hook at top level01
+we have ot  usehook at same level to return statement. 
+if we are creating our custom hook we have to start its name with 'use' word.
+
+
