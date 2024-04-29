@@ -1,0 +1,12 @@
+
+Synthetic events : 
+Synthetic events in React are cross-browser wrappers around the browser’s original event. Different browsers may have different names for the events. 
+When we click on browser outer area is suybthtic evemt area which catches it and captuired in virtual dom.                               
+These events are applied on virtual DOM.
+These are applied as an attribute on react element.
+There name starts with on and event name should be in camel casing 
+<button onClick ={} >
+<button onMouseIn = {} >
+
+We can attach multiple event listener on an element.
+
