@@ -1,0 +1,8 @@
+import { Component } from "react";
+
+
+Synatx ;const [state ,setState] = useState  (defaultvalue);
+
+
+it is a hook used to store literals inside fucntional Components.
+it can store anytype of literal in state.
