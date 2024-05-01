@@ -1,0 +1,59 @@
+  
+    3phases : 
+   lifecycle---->
+
+    Mounting (birth) ------> Updating(Chaanges) ------> Unmounting(Death)
+
+    1.Mounting Phase : 
+      In mounting phase react component is mounted on real dom. We have several methods which will run in mounting phase automatically.
+     i) Constructor() :  it is used to initialize.
+      it loads only once in entire lifecycle.
+      inside constructor we should not write business logic.
+      should not use sideffect (no api calls like setTimeout,FetchApi etc).
+      it is mandatory to use super() to call parent class.
+
+      ii) getDerived state from Props():
+      It is called after constructor in this method we can update state or we can initialised the state with intial props.
+      It take state as an arg and return object with change in state.
+
+      iii) render :
+       it is used to write UI logic
+       should not use sideeffect.
+       should not write business logic.
+
+
+      componentDidMount :- 
+      it is called after render method 
+      we can write business logic
+      we can use sideeffects (api calls).
+      this method is run only when component is  mounted on real dom.
+      we can use setState() method  in componentDIDmount.
+
+
+      2. Updating phase : 
+      it is in which react component is updated is known as updating phase.
+
+      i) getDerivedState from Props()
+      ii) shouldComponentUpdate(previous Prop,previous State)
+       this method is responsible for component update.
+       BY default it return false 
+       it means component will not get updated.
+       to  update the component this method should return "true" then only render method get snapshot before update() and componentDidMount() implements.
+
+       iii) getSnapShotBeforeUpdate(previous Props,previous State,snapshot)
+         it has access of props  and state before update.
+         when using  getSnapshot before update() method we have to always use componentDidUpdate() method.
+
+
+
+      componentDidUpdate(previous Prop,previous State)   
+        this method is called after component is update in realdom.
+        we can use  side effect business logic.
+        we can use  this  method individually.
+
+
+        3. Unmouting phase:
+          This phase is which component is removed from real dom is known as unmounting phase.
+
+          i) componentWillMount()
+            THis method get executed only when component is removed from real dom.
