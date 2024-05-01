@@ -1,0 +1,12 @@
+useRef :
+
+The useRef is a hook that allows to directly create a reference to the DOM element in the functional component.
+The main use of useRef hook is to access the DOM elements in a more efficient way as compared to simple refs. 
+To import the useRef hook, write the following code at the top level of your component
+
+import { useRef } from 'react';
+
+const refContainer = useRef(initialValue);
+The useRef returns a mutable ref object. This object has a property called .current. The value is persisted in the refContainer.current property. These values are accessed from the current property of the returned object. 
+
+

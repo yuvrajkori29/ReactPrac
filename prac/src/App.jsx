@@ -1,35 +1,26 @@
+import Home from "./Components/stateHook/Home"
+import Nav from "./Components/stateHook/Nav"
+import About from "./Components/stateHook/About"
+import { useState } from "react"
 
-import { useState } from 'react';
-import './App.css';
-import Login from './Components/stateHook/Login'
-import Signup from './Components/stateHook/Signup';
+  
+  const App = () => {
+    const  [page,setPage] = useState(true);
+    return (
+      <div>
 
-const App = () => {
+<Nav></Nav>
+ {page ? <Home></Home> : <About></About>}
 
-  const [userExist,setUserExist] = useState(false);
+ {page ?     
+ <button className='px-4 py-1 bg-cyan-500 text-white' onClick={()=>{setPage(false)}}>About</button> :
+   <button className='px-4 py-1 bg-cyan-500 text-white 'onClick={()=>{setPage(true)}}>Home</button>}
 
-  return (
-   
-    <section className='shadow-lg'>
-    <article className='border-[1px] border-black rounded-md w-[300px] p-3 flex flex-col gap-4 drop-shadow-lg'>
 
-         {userExist ? <Login/> : <Signup/>}
 
-         {userExist ?  <button className='px-4 py-1 bg-red-600 text-black' onClick={()=>{setUserExist(false)}}>SignUp</button> :    
-           <button className='px-4 py-1 bg-[#0866ff] text-white' onClick={()=>{setUserExist(true)}}> Login</button>
-          }
-      
 
-      
-    
-    </article>
-      
-    </section>
-            
-           
-
-    
-  )
-}
-
-export default App
+      </div>
+    )
+  }
+  
+  export default App
