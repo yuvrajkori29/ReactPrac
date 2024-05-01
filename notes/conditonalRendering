@@ -1,0 +1,6 @@
+conditional rendering is a techniqe in react by which we display our component on a specific condition.
+
+in react we have :
+Ternary Operator
+Short Circuit -- we use && , || 
+  -- if user exsists

@@ -1,26 +1,33 @@
-import Home from "./Components/stateHook/Home"
-import Nav from "./Components/stateHook/Nav"
-import About from "./Components/stateHook/About"
-import { useState } from "react"
+import {Fragment, useRef} from 'react'; 
 
-  
-  const App = () => {
-    const  [page,setPage] = useState(true);
-    return (
-      <div>
+function App() { 
 
-<Nav></Nav>
- {page ? <Home></Home> : <About></About>}
+// Creating a ref object using useRef hook 
+const focusPoint = useRef(); 
+const myRef= useRef(); 
+const onClickHandler = () => { 
+	focusPoint.current.value = 
+	"LEarning useRef hook"; 
+	focusPoint.current.focus(); 
 
- {page ?     
- <button className='px-4 py-1 bg-cyan-500 text-white' onClick={()=>{setPage(false)}}>About</button> :
-   <button className='px-4 py-1 bg-cyan-500 text-white 'onClick={()=>{setPage(true)}}>Home</button>}
+  console.log(myRef.current.value);
+}; 
+return ( 
+	<Fragment> 
+	<div> 
+		<button onClick={onClickHandler}> 
+		ACTION 
+		</button> 
+	</div> 
+	<label> 
+	Click on the action button to 
+	focus and populate the text. 
+	</label><br/> 
+	{/* <textarea ref={focusPoint} />  */}
+  <input type="text" ref={myRef} />
+  <button onClick={onClickHandler}></button>
+	</Fragment> 
+)
+} 
 
-
-
-
-      </div>
-    )
-  }
-  
-  export default App
+export default App;

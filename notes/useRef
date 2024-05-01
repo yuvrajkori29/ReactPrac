@@ -9,4 +9,7 @@ import { useRef } from 'react';
 const refContainer = useRef(initialValue);
 The useRef returns a mutable ref object. This object has a property called .current. The value is persisted in the refContainer.current property. These values are accessed from the current property of the returned object. 
 
-
+it is used to get the address of elements 
+ref store element in current property 
+to use this ref we have useRef hook.
+We have to provide variable name inside ref attribute.  
