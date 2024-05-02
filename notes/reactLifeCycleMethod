@@ -2,17 +2,17 @@
     3phases : 
    lifecycle---->
 
-    Mounting (birth) ------> Updating(Chaanges) ------> Unmounting(Death)
+    Mounting (birth) ------> Updating(Changes) ------> Unmounting(Death)
 
     1.Mounting Phase : 
       In mounting phase react component is mounted on real dom. We have several methods which will run in mounting phase automatically.
      i) Constructor() :  it is used to initialize.
       it loads only once in entire lifecycle.
       inside constructor we should not write business logic.
-      should not use sideffect (no api calls like setTimeout,FetchApi etc).
+      should not use side-effect (no api calls like setTimeout,FetchApi etc).
       it is mandatory to use super() to call parent class.
 
-      ii) getDerived state from Props():
+      ii) getDerivedStateFromProps():
       It is called after constructor in this method we can update state or we can initialised the state with intial props.
       It take state as an arg and return object with change in state.
 
