@@ -1,0 +1,3 @@
+Props drilling is a situation where we have component drilling and we have to pass data to the deepest node of the component 
+To do so we have to pass data through each component which will reach the desired component as a props. This situation referred as props drilling.
+ 

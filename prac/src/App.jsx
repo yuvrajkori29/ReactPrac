@@ -1,11 +1,19 @@
-import ClassComponent1 from './Components/ClassComponents/ClassComponent1'
+
+import Child1 from './Components/PropsDrillinng/Child1';
+import img from './assets/download.jpeg';
+
 function App() {
+  const user = {
+     userID :1133,
+     userName :'Yuvraj Kori',
+     emailId : 'mailmenow@gmail.com',
+     image : img
+  }
   return (
-    <div>
-              <ClassComponent1 user="Ayush"></ClassComponent1>
-           
-        
-    </div>
+   <>
+   <Child1 property={user}/>
+
+   </>
   )
 }
 
