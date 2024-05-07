@@ -1,8 +1,15 @@
+import { useContext } from "react"
+import { context } from "../../MyContext";
 
-function Child2(props) {
-    console.log(props);
+const Child2 = () => {
+
+    const property = useContext(context);
+    console.log(property.fruits[0]);
+
+    
   return (
-    <div>Child2</div>
+
+    <div id="useMe">Child2</div>
   )
 }
 

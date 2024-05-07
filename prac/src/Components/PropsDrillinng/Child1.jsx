@@ -1,12 +1,15 @@
-import Child2 from "./Child2"
+import { useContext } from "react"
+import { context } from "../../MyContext";
 
-function Child1(props) {
-    console.log(props)
+const Child1 = ()=> {
+   
+    const property = useContext(context);
+    console.log(property);
 
   
   return (
   <>
-  <Child2 propsC1 ={props}/>
+     
   </>
   )
 }

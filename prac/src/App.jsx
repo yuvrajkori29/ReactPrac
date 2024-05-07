@@ -1,19 +1,19 @@
+import { useContext } from "react"
+import { context } from "./MyContext"
+import Child2 from "./Components/PropsDrillinng/Child2";
 
-import Child1 from './Components/PropsDrillinng/Child1';
-import img from './assets/download.jpeg';
 
-function App() {
-  const user = {
-     userID :1133,
-     userName :'Yuvraj Kori',
-     emailId : 'mailmenow@gmail.com',
-     image : img
-  }
+
+
+
+const App = () => {
+  const first  = useContext(context);
+  console.log(first);
   return (
-   <>
-   <Child1 property={user}/>
-
-   </>
+    <div>App
+    <Child2/>
+    </div>
+    
   )
 }
 
