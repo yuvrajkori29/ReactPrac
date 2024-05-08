@@ -1,8 +1,9 @@
+import Nav from "./Nav"
 
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div className="w-[100vw] h-[10vh] bg-lime-100 "><Nav></Nav></div>
   )
 }
 

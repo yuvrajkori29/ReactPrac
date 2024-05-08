@@ -1,0 +1,64 @@
+React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.
+
+install react-router-dom library in your apllication using :
+------> npm i react-router-dom
+
+
+createBrowserRouter : react router dom provide component like browser-router.
+It is a component in react which is used to create different routes. 
+Syntax : 
+
+<!-- import * as React from "react";
+import * as ReactDOM from "react-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+import Root, { rootLoader } from "./routes/root";
+import Team, { teamLoader } from "./routes/team";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    loader: rootLoader,
+    children: [
+      {
+        path: "team",
+        element: <Team />,
+        loader: teamLoader,
+      },
+    ],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />
+);
+ -->
+
+
+What is react-router ?
+React router is a library  that provides navigational component for react developers to create a single-page applications  with dynamic, client side routing.
+
+React routerProvider component :
+ react router can be provided to the entire application using the  <RouterProvider> component from react-router-dom and including a router attribute. In the given example React Router is a provided to the entire application using a 
+<RouterProvider> component in the main App component.
+
+import {ReactProvider} from 'react-router-dom' ;
+
+
+<ReactProvider router={router}   />
+
+Link :
+React-router's link component can be used to create links for navigation. The 'to' prop specifies the location to which the user will be redirected after clicking on the <Link>
+
+Rendering a <Link> will insert an anchor tag(<a>) in your html doc , but the  anchors tags default  behavior (trigger a page reload)
+will be  disabled. This allows the application's  <Router> to respond to URL changes by rendering the appropriate content.
+
+<Link to='/about'>About</Link>
+
+Outlet : 
+The React-router <Outlet> component is  used within the parent route  element to indicate where a child route element should be rendered. 
+  

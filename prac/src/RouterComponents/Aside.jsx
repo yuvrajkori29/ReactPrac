@@ -2,8 +2,10 @@
 
 const Aside = () => {
   return (
-    <div>Aside</div>
+    <div>
+       <div className="w-[20vw] h-[100vh] bg-blue-300">Footer</div>
+    </div>
   )
 }
 
-export default Aside
+export default Aside;

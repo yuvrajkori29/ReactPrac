@@ -1,7 +1,11 @@
 
 const HomeMain = () => {
   return (
-    <div>HomeMain</div>
+    <div>
+
+<div className="w-[80vw] h-[100vh] bg-green-400">Welcom to our app</div>
+
+    </div>
   )
 }
 
